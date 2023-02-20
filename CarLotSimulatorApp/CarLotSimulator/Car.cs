@@ -16,35 +16,32 @@ namespace CarLotSimulator
         public string Make { get; set; }
         public string Model { get; set; }
         public bool IsDriveable { get; set; }
-        public string HonkNoise { get; private set; }       //makes it readonly externally
-        public string EngineNoise { get; private set; }     //makes it readonly externally
+        public string HonkNoise { get; set; }
+        public string EngineNoise { get; set; }
 
         public Car()
         {
-            //Default constructor
             IsDriveable = true;
         }
 
-        public Car(int yr, string mk, string mod, bool canDrive)
+        public Car(int yr, string mk, string mod, bool canDrive, string honk, string engine)
         {
             Year = yr;
             Make = mk;
             Model = mod;
             IsDriveable= canDrive;
+            HonkNoise = honk;
+            EngineNoise = engine;
         }    
 
-        public void MakeEngineNoise(string notedNoise)
+        public void MakeEngineNoise()
         {
-            //I don't really understand what you're wanting this to do; the instructions aren't clear.
-            //Of course, the point is to see if I can organize these objects, so I'm simply making it do SOMETHING and moving on.
-            //In my thinking, the reason for having a method like this is that it would do several things in addition to setting the property, so you didn't want to just handle that in the setter??
-            EngineNoise = notedNoise;
+            Console.WriteLine($"{EngineNoise}");
         }
 
-        public void MakeHonkNoise(string notedNoise)
+        public void MakeHonkNoise()
         {
-            //Once again... don't really know what you want me to do here.
-            HonkNoise = notedNoise;
+            Console.WriteLine($"{HonkNoise}");
         }
 
         public override string ToString()

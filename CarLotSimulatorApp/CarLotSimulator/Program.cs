@@ -16,9 +16,9 @@ namespace CarLotSimulator
             //Now that the Car class is created we can instanciate 3 new cars
             //Set the properties for each of the cars
             //Call each of the methods for each car
-            var myCar = new Car() { Year=2015, Make="Honda", Model="Pilot", IsDriveable=true };
-            myCar.MakeEngineNoise("Purrrrrrr");
-            myCar.MakeHonkNoise("Beep");
+            var myCar = new Car() { Year=2015, Make="Honda", Model="Pilot", IsDriveable=true, EngineNoise="Purrrrrr", HonkNoise="Beep" };
+            myCar.MakeEngineNoise();
+            myCar.MakeHonkNoise();
             settleLot.Inventory.Add(myCar);
 
             //*************BONUS*************//
@@ -30,13 +30,15 @@ namespace CarLotSimulator
             wifeCar.Make = "Toyota";
             wifeCar.Model = "Camry";
             wifeCar.IsDriveable = true;
-            wifeCar.MakeEngineNoise("Raspy");
-            wifeCar.MakeHonkNoise("Wok");
+            wifeCar.EngineNoise = "Vrooomm";
+            wifeCar.HonkNoise = "WokWok";
+            wifeCar.MakeEngineNoise();
+            wifeCar.MakeHonkNoise();
             settleLot.Inventory.Add(wifeCar);
             //Method #3 - Build the assignments into a constructor
-            var daughterCar = new Car(2010, "Toyota", "Corolla", false);
-            daughterCar.MakeEngineNoise("Cough");
-            daughterCar.MakeHonkNoise("Squeek");
+            var daughterCar = new Car(2010, "Toyota", "Corolla", false, "Squeek", "CoughCough");
+            daughterCar.MakeEngineNoise();
+            daughterCar.MakeHonkNoise();
             settleLot.Inventory.Add(daughterCar);
 
             //*************BONUS X 2*************//
