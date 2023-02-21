@@ -22,6 +22,7 @@ namespace CarLotSimulator
         public Car()
         {
             IsDriveable = true;
+            CarLot.numCarsCreated++;        // Added for the static branch of the code
         }
 
         public Car(int yr, string mk, string mod, bool canDrive, string honk, string engine)
@@ -32,6 +33,7 @@ namespace CarLotSimulator
             IsDriveable= canDrive;
             HonkNoise = honk;
             EngineNoise = engine;
+            CarLot.numCarsCreated++;        // Added for the static branch of the code
         }    
 
         public void MakeEngineNoise()

@@ -10,6 +10,7 @@ namespace CarLotSimulator
     {
         public string Name { get; set; }
         public List<Car> Inventory;
+        public static int numCarsCreated = 0;       // Added for the static branch of the code
 
         public CarLot() 
         {

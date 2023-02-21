@@ -20,6 +20,7 @@ namespace CarLotSimulator
             myCar.MakeEngineNoise();
             myCar.MakeHonkNoise();
             settleLot.Inventory.Add(myCar);
+            Console.WriteLine($"Total cars created after mine = {CarLot.numCarsCreated}");
 
             //*************BONUS*************//
             // Set the properties utilizing the 3 different ways we learned about, one way for each car
@@ -35,11 +36,13 @@ namespace CarLotSimulator
             wifeCar.MakeEngineNoise();
             wifeCar.MakeHonkNoise();
             settleLot.Inventory.Add(wifeCar);
+            Console.WriteLine($"Total cars created after wife = {CarLot.numCarsCreated}");
             //Method #3 - Build the assignments into a constructor
             var daughterCar = new Car(2010, "Toyota", "Corolla", false, "Squeek", "CoughCough");
             daughterCar.MakeEngineNoise();
             daughterCar.MakeHonkNoise();
             settleLot.Inventory.Add(daughterCar);
+            Console.WriteLine($"Total cars created after daughter = {CarLot.numCarsCreated}");
 
             //*************BONUS X 2*************//
             //Create a CarLot class
@@ -49,6 +52,8 @@ namespace CarLotSimulator
             Console.WriteLine("*** Inventory List for " + settleLot.Name + "***");
             foreach (Car c in settleLot.Inventory) 
                 Console.WriteLine(c.ToString());
+
+            //Minor change
         }
     }
 }
